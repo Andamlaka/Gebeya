@@ -1,0 +1,37 @@
+ <svg
+              width="24"
+              height="25"
+              viewBox="0 0 16 17"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              className=" justify-center items-center 
+     transform hover:scale-110 transition duration-200"
+            >
+              <g clip-path="url(#clip0_56_349)">
+                <path
+                  d="M11.6667 11.9167L14.6667 14.9167"
+                  stroke="#FFFFFF"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M13.3335 7.58333C13.3335 4.26962 10.6472 1.58333 7.3335 1.58333C4.01979
+ 1.58333 1.3335 4.26962 1.3335 7.58333C1.3335 10.897 4.01979 13.5833 7.3335
+  13.5833C10.6472 13.5833 13.3335 10.897 13.3335 7.58333Z"
+                  stroke="#FFFFFF"
+                  stroke-width="1.5"
+                  stroke-linejoin="round"
+                />
+              </g>
+              <defs>
+                <clipPath id="clip0_56_349">
+                  <rect
+                    width="25"
+                    height="24"
+                    fill="white"
+                    transform="translate(0 0.25)"
+                  />
+                </clipPath>
+              </defs>
+            </svg>

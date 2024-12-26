@@ -1,8 +1,10 @@
 import React from 'react'
 import profile from '../../assets/Navbar/blank_profile.png'
 import dropdown from '../../assets/Navbar/dropdown.svg'
-import { navLinks,moreLinks } from '../Constants/Header'
+import { navLinks, moreLinks } from '../Constants/Header'
 import { Link } from 'react-router'
+import searchIcon from '../../asssts/Navbar/searchIcon'
+import searchIcon2 from '../../asssts/Navbar/searchIcon'
 const DesktopView = () => {
   return (
     <header
@@ -56,44 +58,70 @@ const DesktopView = () => {
             </div>
           </div>
         </div>
-        <nav className='ml-5'>
-    <ul className="flex space-x-3">
-        {navLinks.map(({ id, title, href }) => (
-            <li key={id} className={id === 'more' ? 'relative group' : ''}>
+        <nav className="ml-5">
+          <ul className="flex space-x-3">
+            {navLinks.map(({ id, title, href }) => (
+              <li key={id} className={id === 'more' ? 'relative group' : ''}>
                 <Link
-                    to={href}
-                    className={`h-6 font-poppins text-[16px] leading-[24px] 
+                  to={href}
+                  className={`h-6 font-poppins text-[16px] leading-[24px] 
                     text-[#1E1E1E] text-left cursor-pointer focus:font-bold flex items-center`}
                 >
-                    {title}
-                    {id === 'more' && (
-                        <span className="cursor-pointer ml-2">
-                            <img
-                                src={dropdown}
-                                className="w-[20px] h-[20px] group-hover:rotate-180"
-                                alt="dropdown"
-                            />
-                        </span>
-                    )}
+                  {title}
+                  {id === 'more' && (
+                    <span className="cursor-pointer ml-2">
+                      <img
+                        src={dropdown}
+                        className="w-[20px] h-[20px] group-hover:rotate-180"
+                        alt="dropdown"
+                      />
+                    </span>
+                  )}
                 </Link>
                 {id === 'more' && (
-                    <ul className="absolute left-0 mt-0 hidden w-[150px]
-                    group-hover:block bg-white border border-gray-300 ">
-                        {moreLinks.map(moreLink => (
-                            <li key={moreLink.id} className="py-2 px-4 border border-gray-300 font-semibold text-black cursor-pointer">
-                                <Link to={`more/${moreLink.href}`} className="text-black">
-                                    {moreLink.title}
-                                </Link>
-                            </li>
-                        ))}
-                    </ul>
+                  <ul
+                    className="absolute left-0 mt-0 hidden w-[150px]
+                    group-hover:block bg-white border border-gray-300 "
+                  >
+                    {moreLinks.map((moreLink) => (
+                      <li
+                        key={moreLink.id}
+                        className="py-2 px-4 border border-gray-300 font-semibold text-black cursor-pointer"
+                      >
+                        <Link
+                          to={`more/${moreLink.href}`}
+                          className="text-black"
+                        >
+                          {moreLink.title}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
                 )}
-            </li>
-        ))}
-    </ul>
-</nav>
+              </li>
+            ))}
+          </ul>
+        </nav>
       </div>
-      <div className="className"></div>
+      {/* search bar section */}
+      <div className="flex h-9 rounded-xl border border-gray-[#C6C6C6]  justify-between">
+        <div className="flex w-[200px] p-2 gap-2 h-9">
+          <img src={searchIcon} alt="search Icon" />
+          <input
+            type="text"
+            placeholder="Search"
+            className="w-[57px] h-[24px] font-poppins 
+text-[16px] leading-[24px] text-gray-500
+border-none outline-none
+"
+          />
+        </div>
+        <div className='w-[78px] h-9 rounded-tr-[16px] 
+  rounded-br-[16px] pt-2 pr-2 pb-2 gap-[10px] bg-[#882BECF2] 
+  flex justify-center items-center'>
+          <img src={searchIcon} alt="searchIcon2" />
+        </div>
+      </div>
       <div className="className"></div>
       <div className="className"></div>
     </header>
