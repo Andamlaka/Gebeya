@@ -5,6 +5,9 @@ import { navLinks, moreLinks } from '../Constants/Header'
 import { Link } from 'react-router'
 import search1 from '../../assets/Navbar/search1.svg'
 import search2 from '../../assets/Navbar/search2.svg'
+import CountrySelector from '../CountrySelector'
+
+
 const DesktopView = () => {
   return (
     <header
@@ -122,8 +125,8 @@ border-none outline-none
           <img src={search2} alt="searchIcon2" />
         </div>
       </div>
-      <div className="className">
-       
+      <div>
+          <CountrySelector />
       </div>
       <div className="className"></div>
     </header>
