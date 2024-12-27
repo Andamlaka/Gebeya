@@ -6,12 +6,12 @@ import { Link } from 'react-router'
 import search1 from '../../assets/Navbar/search1.svg'
 import search2 from '../../assets/Navbar/search2.svg'
 import CountrySelector from '../CountrySelector'
-
+import notification from '../../assets/Navbar/notification.svg'
 
 const DesktopView = () => {
   return (
     <header
-      className="w-[90%] h-[48px] fixed top-5  left-1/2 transform -translate-x-1/2 
+      className="sm:hidden w-[90%]  h-[48px] fixed top-5  left-1/2 transform -translate-x-1/2 
     z-50 flex items-center justify-between "
     >
       <div className="className">
@@ -24,7 +24,7 @@ const DesktopView = () => {
             alt="profile"
             className="w-[24px] h-[24px] cursor-pointer"
           />
-          
+
           <div className="relative flex justfiy-center items-center group">
             <h1
               className="w-[130px] h-[24px] font-poppins text-[16px] leading-[24px] 
@@ -119,16 +119,31 @@ border-none outline-none
 "
           />
         </div>
-        <div className='w-[78px] h-9 rounded-tr-[16px] 
+        <div
+          className="w-[78px] h-9 rounded-tr-[16px] 
   rounded-br-[16px] pt-2 pr-2 pb-2 gap-[10px] bg-[#882BECF2] 
-  flex justify-center items-center'>
+  flex justify-center items-center"
+        >
           <img src={search2} alt="searchIcon2" />
         </div>
       </div>
       <div>
-          <CountrySelector />
+        <CountrySelector />
       </div>
-      <div className="className"></div>
+      <div
+        className="relative flex justify-center items-center 
+       rounded-full w-[40px] h-[40px]  bg-[#9847EF]"
+      >
+        <h1
+          className="absolute -top-1 -right-1 text-white bg-red-600 
+    rounded-full w-[20px] h-[20px] flex items-center justify-center 
+    text-xs font-bold"
+        >
+          2
+        </h1>
+
+        <img src={notification} alt="notfivation_img" />
+      </div>
     </header>
   )
 }

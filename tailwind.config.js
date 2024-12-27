@@ -10,6 +10,11 @@ export default {
         'alfa-slab': ['"Alfa Slab One"', 'serif'], 
         poppins: ['Poppins', 'sans-serif'],
       },
+      screens:{
+       
+        sm:{max:'1024px'},
+
+      }
       
     },
   },
