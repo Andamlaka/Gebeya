@@ -3,13 +3,13 @@ import profile from '../../assets/Navbar/blank_profile.png'
 import dropdown from '../../assets/Navbar/dropdown.svg'
 import { navLinks, moreLinks } from '../Constants/Header'
 import { Link } from 'react-router'
-import searchIcon from '../../asssts/Navbar/searchIcon'
-import searchIcon2 from '../../asssts/Navbar/searchIcon'
+import search1 from '../../assets/Navbar/search1.svg'
+import search2 from '../../assets/Navbar/search2.svg'
 const DesktopView = () => {
   return (
     <header
       className="w-[90%] h-[48px] fixed top-5  left-1/2 transform -translate-x-1/2 
-    z-50 flex items-center justify-between"
+    z-50 flex items-center justify-between "
     >
       <div className="className">
         <img src="logo.jpg" alt="logo" className="w-[40px] h-[40px]" />
@@ -21,7 +21,7 @@ const DesktopView = () => {
             alt="profile"
             className="w-[24px] h-[24px] cursor-pointer"
           />
-
+          
           <div className="relative flex justfiy-center items-center group">
             <h1
               className="w-[130px] h-[24px] font-poppins text-[16px] leading-[24px] 
@@ -106,7 +106,7 @@ const DesktopView = () => {
       {/* search bar section */}
       <div className="flex h-9 rounded-xl border border-gray-[#C6C6C6]  justify-between">
         <div className="flex w-[200px] p-2 gap-2 h-9">
-          <img src={searchIcon} alt="search Icon" />
+          <img src={search1} alt="search Icon" />
           <input
             type="text"
             placeholder="Search"
@@ -119,10 +119,12 @@ border-none outline-none
         <div className='w-[78px] h-9 rounded-tr-[16px] 
   rounded-br-[16px] pt-2 pr-2 pb-2 gap-[10px] bg-[#882BECF2] 
   flex justify-center items-center'>
-          <img src={searchIcon} alt="searchIcon2" />
+          <img src={search2} alt="searchIcon2" />
         </div>
       </div>
-      <div className="className"></div>
+      <div className="className">
+       
+      </div>
       <div className="className"></div>
     </header>
   )
